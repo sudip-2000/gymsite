@@ -112,13 +112,13 @@ export function Gympage() {
     <div className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-950">
       <header className="flex h-16 items-center border-b bg-blue-900 px-6 dark:border-gray-800 dark:bg-blue-950">
         <div className="flex items-center gap-6">
-          <Link href="#" className="flex items-center gap-2 font-bold text-white text-xl" prefetch={false}>
+          <Link href="gympage" className="flex items-center gap-2 font-bold text-white text-xl" prefetch={false}>
             <DumbbellIcon className="h-8 w-8 text-white" />
             <span>Gym Management</span>
           </Link>
           <nav className="ml-auto flex gap-6 sm:gap-8 text-white">
             <Link
-              href="#"
+              href="Addmember"
               className="flex items-center gap-2 text-sm font-bold hover:bg-blue-800 dark:hover:bg-blue-900 rounded-md px-2 py-1 transition-colors"
               onClick={() => setIsAddMemberModalOpen(true)}
               prefetch={false}
@@ -261,7 +261,13 @@ export function Gympage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button onClick={() => setIsAddMemberModalOpen(true)}>Add New Member</Button>
+            <Link
+                href="Addmember"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                prefetch={false}
+              >
+                Add New Member
+              </Link>
             </CardFooter>
           </Card>
           <Card>

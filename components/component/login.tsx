@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-export function Loginpage() {
+export function Login() {
   return (
     <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950">
       <div className="w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900">
@@ -55,7 +55,7 @@ export function Loginpage() {
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
           Don&apos;t have an account?{""}
           <Link
-            href="#"
+            href="Register"
             className="font-medium underline underline-offset-4 text-gray-900 hover:text-gray-700 dark:text-gray-50 dark:hover:text-gray-300"
             prefetch={false}
           >

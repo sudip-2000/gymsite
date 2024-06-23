@@ -24,8 +24,12 @@ import { Button } from "@/components/ui/button"
 
 export function Addmember() {
   return (
+    <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950">
+      
     <Card className="w-full max-w-md">
-      <CardHeader>
+   
+    
+      <CardHeader className="text-center">
         <CardTitle>Add New Member</CardTitle>
         <CardDescription>Fill out the form to add a new member to your team.</CardDescription>
       </CardHeader>
@@ -65,5 +69,7 @@ export function Addmember() {
         </Button>
       </CardFooter>
     </Card>
+  </div>
+  
   )
 }
