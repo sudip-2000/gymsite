@@ -107,14 +107,14 @@ export function Landing() {
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Scheduling</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Streamline your gym's scheduling with our powerful scheduling tools, including class management and
+                    Streamline your gym&apos scheduling with our powerful scheduling tools, including class management and
                     staff scheduling.
                   </p>
                 </div>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Reporting</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Generate detailed reports on your gym's performance, including revenue, attendance, and member
+                    Generate detailed reports on your gym&apos performance, including revenue, attendance, and member
                     analytics.
                   </p>
                 </div>
