@@ -78,7 +78,7 @@ export function Gympage() {
   const [expiryDate, setExpiryDate] = useState(
     new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().slice(0, 10),
   )
-  const handleSubmit = (e) => {
+  const handleEvent = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault()
     const newMember = {
       id: members.length + 1,
