@@ -18,8 +18,10 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 import Link from "next/link"
+import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+
 
 export function Landing() {
   return (
@@ -27,7 +29,14 @@ export function Landing() {
       <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900">
         <button className="flex items-center justify-center text-2xl font-bold">
         
-        <img src="/favicon.ico" width="30" height="30" alt=""/>
+                  <Image
+            src="/favicon.ico"
+            alt="Favicon"
+            width={30}
+            height={30}
+            layout="fixed"
+          />
+
          
           <span>GymsEngine</span>
         </button>
@@ -55,32 +64,37 @@ export function Landing() {
             >
               <CarouselContent>
                 <CarouselItem>
-                  <img
-                    src="/hero1.jpg"
-                    width="1920"
-                    height="1080"
-                    alt="Gym Hero 1"
-                    className="w-full h-[400px] md:h-[600px] object-cover"
-                    
-                  />
+                                <Image
+                  src="/hero3.jpg"
+                  alt="Gym Hero 3"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-[400px] md:h-[600px] object-cover"
+                  layout="responsive"
+                />
+
                 </CarouselItem>
                 <CarouselItem>
-                  <img
-                    src="/hero3.jpg"
-                    width="1920"
-                    height="1080"
-                    alt="Gym Hero 2"
-                    className="w-full h-[400px] md:h-[600px] object-cover"
-                  />
+                                <Image
+                  src="/hero1.jpg"
+                  alt="Gym Hero 1"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-[400px] md:h-[600px] object-cover"
+                  layout="responsive"
+                />
+
                 </CarouselItem>
                 <CarouselItem>
-                  <img
-                    src="/hero2.jpg"
-                    width="1920"
-                    height="1080"
-                    alt="Gym Hero 3"
-                    className="w-full h-[400px] md:h-[600px] object-cover"
-                  />
+                                <Image
+                  src="/hero2.jpg"
+                  alt="Gym Hero 2"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-[400px] md:h-[600px] object-cover"
+                  layout="responsive"
+                />
+
                 </CarouselItem>
               </CarouselContent>
             </Carousel>

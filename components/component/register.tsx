@@ -124,7 +124,7 @@ export function Register() {
   )
 }
 
-function XIcon(props) {
+function XIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}

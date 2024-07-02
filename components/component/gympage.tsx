@@ -27,6 +27,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import Image from 'next/image';
+
 
 export function Gympage() {
   const [isAddMemberModalOpen, setIsAddMemberModalOpen] = useState(false)
@@ -153,7 +155,14 @@ export function Gympage() {
           <DropdownMenu open={isProfileMenuOpen} onOpenChange={setIsProfileMenuOpen}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
-                <img src="/profile.jpg" width={40} height={40} alt="Avatar" className="rounded-full" />
+              <Image
+              src="/profile.jpg"
+              alt="Avatar"
+              width={40}
+              height={40}
+              className="rounded-full"
+               />
+
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -338,7 +347,7 @@ export function Gympage() {
   )
 }
 
-function BookIcon(props) {
+function BookIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -358,7 +367,7 @@ function BookIcon(props) {
 }
 
 
-function CalendarIcon(props) {
+function CalendarIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -381,7 +390,7 @@ function CalendarIcon(props) {
 }
 
 
-function DumbbellIcon(props) {
+function DumbbellIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -405,7 +414,7 @@ function DumbbellIcon(props) {
 }
 
 
-function InfoIcon(props) {
+function InfoIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -427,7 +436,7 @@ function InfoIcon(props) {
 }
 
 
-function LogOutIcon(props) {
+function LogOutIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -449,7 +458,7 @@ function LogOutIcon(props) {
 }
 
 
-function PencilIcon(props) {
+function PencilIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -470,7 +479,7 @@ function PencilIcon(props) {
 }
 
 
-function PlusIcon(props) {
+function PlusIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -491,7 +500,7 @@ function PlusIcon(props) {
 }
 
 
-function RefreshCwIcon(props) {
+function RefreshCwIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -514,7 +523,7 @@ function RefreshCwIcon(props) {
 }
 
 
-function TrashIcon(props) {
+function TrashIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -536,7 +545,7 @@ function TrashIcon(props) {
 }
 
 
-function UserIcon(props) {
+function UserIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -557,7 +566,7 @@ function UserIcon(props) {
 }
 
 
-function UsersIcon(props) {
+function UsersIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
@@ -580,7 +589,7 @@ function UsersIcon(props) {
 }
 
 
-function WalletIcon(props) {
+function WalletIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}

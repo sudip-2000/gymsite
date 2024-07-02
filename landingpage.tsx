@@ -48,7 +48,7 @@ export function Landingpage() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <Carousel
-              opts={{ align: "center", loop: true, autoplay: true, interval: 5000 }}
+              opts={{ align: "center", loop: true,  }}
               className="rounded-xl overflow-hidden"
             >
               <CarouselContent>
@@ -248,7 +248,7 @@ export function Landingpage() {
   )
 }
 
-function DumbbellIcon(props) {
+function DumbbellIcon({ color = 'currentColor', size = 24, ...props }) {
   return (
     <svg
       {...props}
