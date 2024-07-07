@@ -19,15 +19,19 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 import Link from "next/link"
 import Image from 'next/image';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeadphonesSimple, faLocationCrosshairs, } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF,faXTwitter,faWhatsapp, faViber, faSquareFacebook } from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope } from '@fortawesome/free-regular-svg-icons'
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 
 
 export function Landing() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900">
-        <button className="flex items-center justify-center text-2xl font-bold">
+      <header className="fixed top-0 left-0 right-0 px-4 lg:px-6 h-14 flex items-center bg-primary text-primary-foreground z-50 backdrop-blur-sm">
+        <button className="flex items-center justify-center text-2xl font-bold m">
         
                   <Image
             src="/favicon.ico"
@@ -38,77 +42,63 @@ export function Landing() {
           />
 
          
-          <span>GymsEngine</span>
+        <span>Gyms Engine</span>
         </button>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link href="#landing" className="text-sm font-medium hover:underline underline-offset-4   " prefetch={false}>
             Home
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             About Us
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link href="#pricing" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Pricing
+          </Link>
+          <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Contact Us
           </Link>
-          <Link href="Login" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Sign Up/Login
+          <Link href="Login" className="inline-flex text-sm font-medium h-8  items-center  rounded-md bg-blue-700 px-5 shadow transition-colors hover:bg-sky-500 text-white-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 " prefetch={false}>
+            Login
           </Link>
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <Carousel
-              opts={{ align: "center", loop: true, }}
-              className="rounded-xl overflow-hidden"
-            >
-              <CarouselContent>
-                <CarouselItem>
-                                <Image
-                  src="/hero3.jpg"
-                  alt="Gym Hero 3"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-[400px] md:h-[600px] object-cover"
-                  layout="responsive"
-                />
-
-                </CarouselItem>
-                <CarouselItem>
-                                <Image
-                  src="/hero1.jpg"
-                  alt="Gym Hero 1"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-[400px] md:h-[600px] object-cover"
-                  layout="responsive"
-                />
-
-                </CarouselItem>
-                <CarouselItem>
-                                <Image
-                  src="/hero2.jpg"
-                  alt="Gym Hero 2"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-[400px] md:h-[600px] object-cover"
-                  layout="responsive"
-                />
-
-                </CarouselItem>
-              </CarouselContent>
-            </Carousel>
+      <section className="w-full py-16 md:py-32 lg:py-64 bg-[url('/gyms.gif')] bg-cover bg-center">
+          <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-16 lg:gap-64 items-center">
+            <div className="rounded-xl overflow-hidden">
+              <img
+                src="/Union.png"
+                width="200"
+                height="100"
+                alt="GymsEngine Logo"
+                className="w-full h-[150px] md:h-[200px] lg:h-[250px] object-contain"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Manage Your Gym with Ease</h2>
+              <p className="text-muted-foreground mt-4">
+              GymsEngine provides a comprehensive suite of tools to help you manage your gym efficiently, from
+              member management to scheduling and reporting.
+              </p>
+              <Link
+                href="Register"
+                className="inline-flex h-10 items-center justify-center rounded-md  px-8 text-sm font-medium text-white-500 shadow transition-colors   disabled:pointer-events-none disabled:opacity-50 mt-4 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+                prefetch={false}
+              >
+                Get Started
+              </Link>
+             
+            </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="about">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div>
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Key Features</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Manage Your Gym with Ease</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  GymsEngine provides a comprehensive suite of tools to help you manage your gym efficiently, from
-                  member management to scheduling and reporting.
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl"> Empower Your Gym, Excel Your Ease </h2>
+                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">GymsEngine is a comprehensive, web-based application aims to revolutionize traditional gym operations by offering a comprehensive, subscription-based solution for gym owners, along with accessible fitness tools for the general public. By automating management tasks and providing personalized recommendations, the system will enhance operational efficiency and user satisfaction.
+                  
                 </p>
               </div>
               <div className="grid gap-6">
@@ -136,7 +126,7 @@ export function Landing() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32" id="pricing">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -204,22 +194,53 @@ export function Landing() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Streamline Your Gym?</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Sign up for GymsEngine today and start managing your gym more efficiently.
+                  Contact us for GymsEngine today and start managing your gym more efficiently.
                 </p>
               </div>
-              <Link
-                href="#"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                prefetch={false}
+              <div className="grid gap-2">
+                  <div className="flex items-center justify-center gap-2">
+                  <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 text-muted-foreground"/>
+                    <span className="text-muted-foreground">info@gymsengine.com</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                  <FontAwesomeIcon icon={faHeadphonesSimple} className="h-5 w-5 text-muted-foreground"/>
+                    <span className="text-muted-foreground">+977 9843641508</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                  <FontAwesomeIcon icon={faLocationCrosshairs} className="h-5 w-5 text-muted-foreground"/>
+                    <span className="text-muted-foreground">Budhanilkantha-02, Kathmandu, Nepal</span>
+                  </div>
+              </div>
+              <div
+                className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300" 
               >
-                Sign Up
-              </Link>
+                Contact Us
+              </div>
+              <div className="grid grid-flow-col gap-6">
+               
+                {/* <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5 text-muted-foreground"/>
+                </Link> */}
+                <Link href="https://wa.me/9779843641508" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <FontAwesomeIcon icon={faWhatsapp} className="h-10 w-10 text-muted-foreground"/>
+                </Link>
+                <Link href="viber://chat?number=9843641508" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <FontAwesomeIcon icon={faViber} className="h-10 w-10 text-muted-foreground"/>
+                </Link>
+                <a href="mailto:sparajuli802@gmail.com" className="text-xs hover:underline underline-offset-4" >
+                <FontAwesomeIcon icon={faEnvelope} className="h-10 w-10 text-muted-foreground"/>
+                </a>
+                <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <FontAwesomeIcon icon={faSquareFacebook} className="h-10 w-10 text-muted-foreground"/>
+                </Link>
+              </div>
+           
             </div>
           </div>
         </section>
@@ -227,12 +248,7 @@ export function Landing() {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900">
         <p className="text-xs text-gray-500 dark:text-gray-400">&copy; 2024 GymsEngine. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Privacy
-          </Link>
+          
         </nav>
       </footer>
     </div>

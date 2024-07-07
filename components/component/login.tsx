@@ -17,6 +17,7 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
+
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
@@ -24,6 +25,8 @@ import { Button } from "@/components/ui/button"
 
 export function Login() {
   return (
+    <>
+   
     <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950">
       <div className="w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900">
         <div className="space-y-2 text-center">
@@ -64,5 +67,6 @@ export function Login() {
         </div>
       </div>
     </div>
+    </>
   )
 }
