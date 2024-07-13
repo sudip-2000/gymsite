@@ -22,21 +22,34 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export function Login() {
   return (
     <>
    
-    <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950">
-      <div className="w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900">
+    <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950 ">
+      <div className=" w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900 ring ring-blue-600 ring-offset-4">
+      <Link
+                href="Landing"
+                className="  font-medium  text-gray-900 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-500"
+                prefetch={false}
+              >
+                <FontAwesomeIcon icon={faXmark} className="h-8 w-8 text-muted-foreground"/>
+        </Link>
+        
+        
+              
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Welcome Back</h1>
+        
+          <h1 className="text-3xl font-bold"> Welcome Back</h1>
           <p className="text-gray-500 dark:text-gray-400">Sign in to your account to continue.</p>
         </div>
         <form className="space-y-4">
-          <div className="space-y-2">
+          <div className="space-y-2 ">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" required />
+            <Input  id="email" type="email" placeholder="m@example.com" required />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">

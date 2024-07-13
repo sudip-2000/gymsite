@@ -21,12 +21,27 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 export function Register() {
   return (
+    
     <div className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-b from-black to-blue-500 px-4 dark:bg-gray-950">
+      
       <div className="w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900">
+      <Link
+            href="Landing"
+            className=" font-medium underline underline-offset-4 text-gray-900 hover:text-gray-700 dark:text-gray-50 dark:hover:text-red-500"
+            prefetch={false}
+          >
+            <FontAwesomeIcon icon={faXmark} className="h-8 w-8 text-muted-foreground"/>
+          </Link>
         <div className="space-y-2 text-center">
+       
+          
+        
+          
+        
           <h1 className="text-3xl font-bold">Registration Form</h1>
           <p className="text-gray-500 dark:text-gray-400">Fill the form to register</p>
         </div>
@@ -64,8 +79,11 @@ export function Register() {
           >
             Login
           </Link>
+          
         </div>
+        
       </div>
+      
     </div>
   )
 }

@@ -25,7 +25,7 @@ import { faFacebookF,faXTwitter,faWhatsapp, faViber, faSquareFacebook } from '@f
 import {faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-
+import {Animated} from "react-animated-css";
 
 export function Landing() {
   return (
@@ -34,15 +34,15 @@ export function Landing() {
         <button className="flex items-center justify-center text-2xl font-bold m">
         
                   <Image
-            src="/favicon.ico"
+            src="/Union.png"
             alt="Favicon"
-            width={30}
-            height={30}
+            width={100}
+            height={100}
             layout="fixed"
           />
 
          
-        <span>Gyms Engine</span>
+        {/* <span>Gyms Engine</span> */}
         </button>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link href="#landing" className="text-sm font-medium hover:underline underline-offset-4   " prefetch={false}>
@@ -57,7 +57,7 @@ export function Landing() {
           <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Contact Us
           </Link>
-          <Link href="Login" className="inline-flex text-sm font-medium h-8  items-center  rounded-md bg-blue-700 px-5 shadow transition-colors hover:bg-sky-500 text-white-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 " prefetch={false}>
+          <Link href="Login" className="inline-flex text-sm font-medium h-8  items-center  rounded-full bg-blue-700 px-5 shadow transition-colors hover:bg-sky-500 text-white-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 " prefetch={false}>
             Login
           </Link>
         </nav>
@@ -65,15 +65,17 @@ export function Landing() {
       <main className="flex-1">
       <section className="w-full py-16 md:py-32 lg:py-64 bg-[url('/gyms.gif')] bg-cover bg-center">
           <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-16 lg:gap-64 items-center">
-            <div className="rounded-xl overflow-hidden">
-              <img
-                src="/Union.png"
-                width="200"
-                height="100"
-                alt="GymsEngine Logo"
-                className="w-full h-[150px] md:h-[200px] lg:h-[250px] object-contain"
-              />
-            </div>
+            
+              <div className="rounded-xl overflow-hidden animate-bounce">
+                <img 
+                  src="/Union.png"
+                  width="200"
+                  height="100"
+                  alt="GymsEngine Logo"
+                  className="w-full h-[150px] md:h-[200px] lg:h-[250px] object-contain"
+                />
+              </div>
+          
             <div className="flex flex-col items-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Manage Your Gym with Ease</h2>
               <p className="text-muted-foreground mt-4">
@@ -82,7 +84,7 @@ export function Landing() {
               </p>
               <Link
                 href="Register"
-                className="inline-flex h-10 items-center justify-center rounded-md  px-8 text-sm font-medium text-white-500 shadow transition-colors   disabled:pointer-events-none disabled:opacity-50 mt-4 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+                className=" border-4 border-indigo-200 border-x-indigo-600 hover:animate-pulse inline-flex h-10 items-center justify-center rounded-md  px-8 text-sm font-medium text-white-500 shadow transition-colors   disabled:pointer-events-none disabled:opacity-50 mt-4 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
                 prefetch={false}
               >
                 Get Started
@@ -95,7 +97,7 @@ export function Landing() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div>
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Key Features</div>
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 animate-bounce">Key Features</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl"> Empower Your Gym, Excel Your Ease </h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">GymsEngine is a comprehensive, web-based application aims to revolutionize traditional gym operations by offering a comprehensive, subscription-based solution for gym owners, along with accessible fitness tools for the general public. By automating management tasks and providing personalized recommendations, the system will enhance operational efficiency and user satisfaction.
                   
@@ -130,7 +132,7 @@ export function Landing() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Pricing</div>
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 animate-bounce">Pricing</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Affordable Pricing for Your Gym</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   GymsEngine offers flexible pricing plans to fit the needs of gyms of all sizes, from small studios to
@@ -145,7 +147,7 @@ export function Landing() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-baseline justify-center space-x-2">
-                      <span className="text-4xl font-bold">$29</span>
+                      <span className="text-4xl font-bold animate-bounce">$29</span>
                       <span className="text-gray-500 dark:text-gray-400">/month</span>
                     </div>
                     <ul className="space-y-1 text-gray-500 dark:text-gray-400">
@@ -154,10 +156,10 @@ export function Landing() {
                       <li>Limited support</li>
                     </ul>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="flex justify-center">
                     <Link
                       href="#"
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                      className="inline-flex h-10 items-center justify-center  rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                       prefetch={false}
                     >
                       Sign Up
@@ -171,7 +173,7 @@ export function Landing() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-baseline justify-center space-x-2">
-                      <span className="text-4xl font-bold">$59</span>
+                      <span className="text-4xl font-bold animate-bounce">$59</span>
                       <span className="text-gray-500 dark:text-gray-400">/month</span>
                     </div>
                     <ul className="space-y-1 text-gray-500 dark:text-gray-400">
@@ -180,7 +182,7 @@ export function Landing() {
                       <li>Priority support</li>
                     </ul>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="flex justify-center">
                     <Link
                       href="#"
                       className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
@@ -222,21 +224,21 @@ export function Landing() {
               >
                 Contact Us
               </div>
-              <div className="grid grid-flow-col gap-6">
+              <div className="grid grid-flow-col gap-6 ">
                
                 {/* <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
                 <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5 text-muted-foreground"/>
                 </Link> */}
-                <Link href="https://wa.me/9779843641508" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <Link href="https://wa.me/9779843641508" className="animate-bounce text-xs hover:underline underline-offset-4" prefetch={false}>
                 <FontAwesomeIcon icon={faWhatsapp} className="h-10 w-10 text-muted-foreground"/>
                 </Link>
-                <Link href="viber://chat?number=9843641508" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <Link href="viber://chat?number=9843641508" className="animate-bounce text-xs hover:underline underline-offset-4" prefetch={false}>
                 <FontAwesomeIcon icon={faViber} className="h-10 w-10 text-muted-foreground"/>
                 </Link>
-                <a href="mailto:sparajuli802@gmail.com" className="text-xs hover:underline underline-offset-4" >
+                <a href="mailto:sparajuli802@gmail.com" className="animate-bounce text-xs hover:underline underline-offset-4" >
                 <FontAwesomeIcon icon={faEnvelope} className="h-10 w-10 text-muted-foreground"/>
                 </a>
-                <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+                <Link href="#" className="animate-bounce text-xs hover:underline underline-offset-4" prefetch={false}>
                 <FontAwesomeIcon icon={faSquareFacebook} className="h-10 w-10 text-muted-foreground"/>
                 </Link>
               </div>

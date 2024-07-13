@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-<link rel="icon" type="image/x-icon" href="/app/favicon.ico"></link>
+<link rel="icon" type="image/x-icon" href="/app/Union.ico"></link>
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
